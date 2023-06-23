@@ -11,20 +11,23 @@
 <body>
     <h1>CALCULADORA</h1>
     <form id="calculator_form" action="calculate.php" method="post">
-        <input type="number" name="first_value" id="first_value" required>
-        <input type="number" name="second_value" id="second_value" required>
+        <h3>DIGITE OS VALORES</h3>
+        <input type="number" name="first_value" id="first_value" placeholder="1º VALOR" required>
+        <input type="number" name="second_value" id="second_value" placeholder="2º VALOR" required><br/>
         <select name="operation" id="operation" required>
-            <option value="" disabled selected>Operação</option>
-            <option value="sum">Somar</option>
-            <option value="subtration">Subtrair</option>
-            <option value="multiplication">Multiplicar</option>
-            <option value="division">Dividir</option>
+            <option value="" disabled selected>OPERAÇÃO</option>
+            <option value="sum">SOMAR</option>
+            <option value="subtration">SUBTRAIR</option>
+            <option value="multiplication">MULTIPLICAR</option>
+            <option value="division">DIVIDIR</option>
         </select>
-        <input type="submit" value="calcular" onclick="calculate()">
+        <input type="submit" value="CALCULAR" onclick="showResult()">
+        <p id="p_resp" class="hide">RESULTADO: 
+            <?php
+                print_r($_SESSION['resp']);
+            ?>
+        </p>
     </form>
-    <p>Resultado:</p>
-    <?php
-        print_r($_SESSION['resp']);
-    ?>
 </body>
+<script src="main.js"></script>
 </html>
