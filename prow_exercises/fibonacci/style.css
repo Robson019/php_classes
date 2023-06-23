@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Outfit', Arial, sans-serif;
+    background: linear-gradient(to top, lightblue, lightslategray) no-repeat fixed;
+    background-size: cover;
+}
+
+h1 {
+    text-align: center;
+    background-color: black;
+    padding: 20px;
+    width: 500px;
+    margin: 30px auto 0px auto;
+    border-radius: 10px;
+    color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+img {
+    width: 75px;
+    height: 75px;
+    border-radius: 100%;
+    position: absolute;
+    left: 14%;
+    top: 10%;
+    transform: translate(-14%, -10%);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+div {
+    background-color: white;
+    margin: auto;
+    padding: 30px;
+    max-width: 1000px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+p {
+    color: black;
+    font-size: 13pt;
+    line-height: 22pt;
+    text-align: justify;
+}
+
+@media only screen and (max-width: 1525px) {
+    img {
+        position: absolute;
+        left: 50%;
+        top: 60%;
+        transform: translate(-50%, -60%);
+    }
+}
+
+/* Media queries */
+@media only screen and (max-width: 700px) {
+    h1 {
+        max-width: 90%;
+    }
+
+    img {
+        position: absolute;
+        left: 50%;
+        top: 75%;
+        transform: translate(-50%, -75%);
+    }
+
+    div {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    p {
+        font-size: 12pt;
+        line-height: 20pt;
+    }
+
+    img {
+        position: absolute;
+        left: 50%;
+        top: 85%;
+        transform: translate(-50%, -85%);
+    }
+}
